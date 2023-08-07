@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="../resources/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript"
+   src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+   integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+   crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    	<!-- favicon -->
+    <link rel="shortcut icon" href="resources/images/ico/favicon.jpg">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/resources/images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/resources/images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/resources/images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/resources/images/ico/apple-touch-icon-57-precomposed.png">
+
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="/resources/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="/resources/css/materialdesignicons.min.css" />
+	<link rel="stylesheet" type="text/css" href="/resources/css/jquery.mCustomScrollbar.min.css" />
+	<link rel="stylesheet" type="text/css" href="/resources/css/prettyPhoto.css" />
+	<link rel="stylesheet" type="text/css" href="/resources/css/unslider.css" />
+	<link rel="stylesheet" type="text/css" href="/resources/css/template.css" />
+
+<script type="text/javascript">
+   $(function(){
+      $('[id^=deletebtn]').click(function(){
+         var idx =  $(this).attr('id').substring(str.indexOf('_') + 1);
+         if(confirm("정말로 삭제하시겠습니까?")){
+            //controller의 mvDel요청 후, 삭제가 성공하면, mv.jsp로 화면을 넘김
+            $.ajax({
+               url: "surveyResultDelete",
+               data: {
+                  surveyResult_idx: idx
+               },
+               success : function(result) {
+                  if(result == '1'){
+                     alert("삭제되었습니다")
+                     location.href = "surveyResult.jsp"
+                  }
+               }//success
+            })//ajax
+         }//confirm
+      })//Btn
+   })//$function
+</script>
+
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+</style>
+</head>
+
+<body data-target="#nino-navbar" data-spy="scroll">
+<div id="nino-headerInner">
+{% if sessionID == NULL %}
+{% include "header.jsp"%}
+    {% else %}
+    {%include "header2.jsp"%}
+{% endif %}
+</div>
+    sessionID: {{ sessionID }} <br>
+    설문지 결과: <br>
+    추천 여행 지역:
+    {% for area in rarea %}
+        {{ area }},
+    {% endfor %}
+    <br><br>
+    추천 여행 활동:
+    {{ ractivity }}
+    <br><br><br>
+    surveyList<br><br>
+    {{ surveyList }}
+<br><br><br>
+
+surveyList:<br>
+    {% for a, b in surveyList %}
+        {{ a }}<br>
+        {{ b }}<br>
+    {% endfor %}
+<br><br><br><br>
+answers:<br>
+    {% for one in answers %}
+        {{ one }}<br>
+    {% endfor %}
+
+
+<button type="button" onclick="location.href='http://localhost:8080/trip/survey/survey.jsp'">새 설문지 작성하기</button>
+<input type="hidden" value="" name="midx" id="midx">
+<pre>   No.          추천결과          작성날짜</pre>
+
+
+{% for resultlist in surveyResultList %}
+    <button class="deleteBtn" id="deleteBtn_{{resultlist.0}}">삭제</button>
+
+   <button class="accordion" id="accordionExample">
+   <pre>{{resultlist.0}}       추천 여행 지역:{% for area in rarea %}{{ area }},{% endfor %}      추천 여행 활동:{{ ractivity }}       {{resultlist.2}}</pre>
+
+   </button>
+   <div class="panel" id= "panel_{{resultlist.0}}">
+
+      {% for surveylist in surveyList %}
+          {% for choices, answers in choice_answers%}
+         <p>{{surveylist.0}}. {{surveylist.1}} <br>답변: {{answers}}</p>
+            {% if choices == '' or choices == null%}
+                <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="{{choices }}" aria-label="{{choices}}" aria-describedby="basic-addon1">
+                </div>
+            {% else %}
+                <input class="form-check-input" type="radio" name="radio{{resultlist.0}}{{surveylist.0}}" id="radio{{choices}}"
+            {% if choices == answers%}checked="checked"
+            {% endif %}>
+
+            <label class="form-check-label" for="radioExample1{{choices}}">
+            {{choices}}
+            </label>
+            {% endif %}
+
+
+         {% endfor %}
+     {% endfor %}
+  </div>
+{% endfor %}
+
+<script>
+    const acc = document.getElementsByClassName("accordion");
+    let i;
+
+    for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+      const panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+</script>
+</body>
+
+</html>

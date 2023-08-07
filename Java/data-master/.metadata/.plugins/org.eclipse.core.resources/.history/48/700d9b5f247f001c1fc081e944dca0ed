@@ -1,0 +1,25 @@
+package object2;
+
+class Animal{
+	String name;
+	
+	void setname(String name) {
+		this.name=name;
+	}
+}
+
+class Tiger extends Animal{
+	
+}
+
+class Lion extends Animal{
+	
+}
+
+public class Sample {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

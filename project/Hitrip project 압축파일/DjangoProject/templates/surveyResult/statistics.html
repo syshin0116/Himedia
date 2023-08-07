@@ -1,0 +1,219 @@
+<html>
+  <head>
+            <!-- favicon -->
+<link rel="shortcut icon" href="/resources/images/ico/favicon.jpg">
+<link rel="apple-touch-icon-precomposed" sizes="144x144"
+	href="/resources/images/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114"
+	href="/resources/images/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72"
+	href="/resources/images/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed"
+	href="/resources/images/ico/apple-touch-icon-57-precomposed.png">
+
+<!-- css -->
+<link rel="stylesheet" type="text/css"
+	href="/resources/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="/resources/css/materialdesignicons.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="/resources/css/jquery.mCustomScrollbar.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="/resources/css/prettyPhoto.css" />
+<link rel="stylesheet" type="text/css" href="/resources/css/unslider.css" />
+<link rel="stylesheet" type="text/css" href="/resources/css/template.css" />
+<link rel="stylesheet" type="text/css"
+	href="/resources/css/slideshow.css" />
+
+	<!-- javascript -->
+	<script type="text/javascript" src="/resources/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/resources/js/isotope.pkgd.min.js"></script>
+	<script type="text/javascript" src="/resources/js/jquery.prettyPhoto.js"></script>
+	<script type="text/javascript" src="/resources/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/resources/js/jquery.hoverdir.js"></script>
+	<script type="text/javascript"
+		src="resources/js/modernizr.custom.97074.js"></script>
+	<script type="text/javascript"
+		src="resources/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script type="text/javascript" src="/resources/js/unslider-min.js"></script>
+	<script type="text/javascript" src="/resources/js/template.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+{#    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">#}
+
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+    google.charts.load('49', {
+  'packages': ['geochart'], 'xlanguage': 'in'
+});
+google.charts.setOnLoadCallback(drawRegionsMap);
+
+function drawRegionsMap() {
+
+  var data = google.visualization.arrayToDataTable([
+    ['Province', '관광지수'],  //
+    {#[{v:'KR-JK'}, 6000],#}
+    [{v:'KR-11',f:'서울특별시' }, 2242], {# 서울특별시 #}
+    [{v:'KR-26',f:'부산광역시' }, 1430], {# 부산광역시 #}
+    [{v:'KR-27',f:'대구광역시' }, 1029], {# 대구광역시 #}
+    [{v:'KR-30',f:'대전광역시' }, 454], {# 대전광역시 #}
+    [{v:'KR-29',f:'광주광역시' }, 495], {# 광주광역시 #}
+    [{v:'KR-28',f:'대전광역시' }, 630], {# 대전광역시 #}
+    [{v:'KR-31',f:'울산광역시' }, 835], {# 울산광역시 #}
+    [{v:'KR-43',f:'충청북도' }, 2089],{# 충청북도 #}
+    [{v:'KR-44',f:'충청남도' }, 2409], {# 충청남도 #}
+    [{v:'KR-42',f:'강원도' }, 2697], {# 강원도 #}
+    [{v:'KR-41',f:'경기도'}, 4037], {#경기도#}
+    [{v:'KR-47',f:'경상북도'}, 5180], {#경상북도#}
+    [{v:'KR-48',f:'경상남도'}, 5612],  {#경상남도#}
+    [{v:'KR-45',f:'전라북도' }, 3138], {# 전라북도 #}
+    [{v:'KR-46',f:'전라남도' }, 4817], {# 전라남도 #}
+    [{v:'KR-49',f:'제주특별자치도' }, 1185], {# 제주특별자치도 #}
+    [{v:'KR-50',f:'세종특별자치시' }, 161] {#  세종특별자치시 #}
+  ]);
+
+
+  const options = {
+      title: '지역별 관광지 개수',
+      geochartVersion: 11,
+      regioncoderVersion: 1,
+      'region': 'KR',
+      'resolution': 'provinces'
+  };
+
+  var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+  chart.draw(data, options);
+}
+
+  google.charts.load("current", {packages:["corechart"]});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+        ['지역', '설문지 참여 유저 수'],
+        ['경기도', 1444],
+        ['서울특별시', 1250],
+        ['부산광역시', 417],
+        ['경상북도', 360],
+        ['경상남도', 339],
+        ['인천광역시', 327],
+        ['대구광역시', 306],
+        ['충청남도', 282],
+        ['전라남도', 257],
+        ['전라북도', 228],
+        ['강원도', 243],
+        ['광주광역시', 186],
+        ['충청북도', 154],
+        ['울산광역시', 151],
+        ['대전광역시', 137],
+        ['제주특별자치도', 89]
+    ]);
+
+    var options = {
+      title: '지역별 설문지 참여 유저 수',
+      is3D: true,
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+    chart.draw(data, options);
+  }
+
+   google.charts.load("current", {packages:["corechart"]});
+  google.charts.setOnLoadCallback(drawChart2);
+  function drawChart2() {
+    var data = google.visualization.arrayToDataTable([
+        ['성별', '설문지 참여 유저수'],
+        ['남자', 2979],
+        ['여자', 3191],
+    ]);
+
+    var options = {
+      title: '성별별 설문지 참여 유저 수',
+      is3D: true,
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart_3d2'));
+    chart.draw(data, options);
+  }
+
+  google.charts.load('49', {
+  'packages': ['geochart'], 'xlanguage': 'in'
+});
+google.charts.setOnLoadCallback(drawRegionsMap2);
+
+function drawRegionsMap2() {
+
+  var data = google.visualization.arrayToDataTable([
+    ['거주지역', '평균 평점'],  //
+    {#[{v:'KR-JK'}, 6000],#}
+    [{v:'KR-11',f:'서울특별시' }, 3.992767], {# 서울특별시 #}
+    [{v:'KR-26',f:'부산광역시' }, 4.14186], {# 부산광역시 #}
+    [{v:'KR-27',f:'대구광역시' }, 3.841584], {# 대구광역시 #}
+    [{v:'KR-30',f:'대전광역시' }, 3.717647], {# 대전광역시 #}
+    [{v:'KR-29',f:'광주광역시' }, 4.017857], {# 광주광역시 #}
+    [{v:'KR-28',f:'대전광역시' }, 3.717647], {# 대전광역시 #}
+    [{v:'KR-31',f:'울산광역시' }, 3.947368], {# 울산광역시 #}
+    [{v:'KR-43',f:'충청북도' }, 3.876404],{# 충청북도 #}
+    [{v:'KR-44',f:'충청남도' }, 3.979927], {# 충청남도 #}
+    [{v:'KR-42',f:'강원도' }, 4.092016], {# 강원도 #}
+    [{v:'KR-41',f:'경기도'}, 4.064755], {#경기도#}
+    [{v:'KR-47',f:'경상북도'}, 3.97482], {#경상북도#}
+    [{v:'KR-48',f:'경상남도'}, 4.060606],  {#경상남도#}
+    [{v:'KR-45',f:'전라북도' }, 4.106942], {# 전라북도 #}
+    [{v:'KR-46',f:'전라남도' }, 4.176305], {# 전라남도 #}
+    [{v:'KR-49',f:'제주특별자치도' }, 4.255061], {# 제주특별자치도 #}
+    [{v:'KR-50',f:'세종특별자치시' }, 4.0] {#  세종특별자치시 #}
+  ]);
+
+
+  const options = {
+      title: '거주지역별 평균 평점',
+      geochartVersion: 11,
+      regioncoderVersion: 1,
+      'region': 'KR',
+      'resolution': 'provinces'
+  };
+
+  var chart = new google.visualization.GeoChart(document.getElementById('regions_div2'));
+
+  chart.draw(data, options);
+}
+</script>
+</head>
+<body>
+    	<!-- Header
+    ================================================== -->
+	<header id="nino-header">
+		<div id="nino-headerInner">
+        {%  include header %}
+
+			<section id="nino-slider" class="carousel slide container"
+				data-ride="carousel"></section>
+		</div>
+	</header>
+    <!-- body -->
+<h1>통계 페이지</h1>
+<button onclick="location.href='SurveyResult/{{ sessionID }}'">설문지 결과 페이지로</button>
+{#<script src='https://www.gstatic.com/charts/testing-loader.js'></script>#}
+    <table class="columns">
+      <tr>
+<h4>지역별 관광지 개수</h4>
+          <td><div id="regions_div" style="width: 700px; height: 400px;"></div></td>
+
+          <td><div id="piechart_3d" style="width: 700px; height: 400px;"></div></td>
+              </tr>
+        <tr>
+            <td><div id="piechart_3d2" style="width: 700px; height: 400px;"></div></td>
+            <td><h4>거주지역별 평균 평점</h4>
+
+                <div id="regions_div2" style="width: 700px; height: 400px;"></div></td>
+        </tr>
+    </table>
+</body>
+</html>

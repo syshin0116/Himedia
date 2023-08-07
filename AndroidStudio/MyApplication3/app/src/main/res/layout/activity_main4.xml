@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity4">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="412dp"
+        android:layout_height="106dp"
+        android:text="나를 눌러봐봐!" />
+
+    <ImageButton
+        android:id="@+id/resetButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/sym_def_app_icon" />
+
+    <EditText
+        android:id="@+id/num1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="num1"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/num2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="num2"
+        android:inputType="textPersonName" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="102dp"
+            android:layout_height="90dp"
+            android:src="@drawable/plus" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="104dp"
+            android:layout_height="90dp"
+            android:src="@drawable/minus" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            android:src="@drawable/multiply" />
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            style="@style/Widget.AppCompat.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:soundEffectsEnabled="false"
+            android:src="@drawable/division" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="398dp"
+            android:layout_height="58dp"
+            android:text="결과"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            tools:layout_editor_absoluteX="6dp"
+            tools:layout_editor_absoluteY="72dp" />
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="412dp"
+            android:layout_height="64dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="182dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

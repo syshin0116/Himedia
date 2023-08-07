@@ -1,0 +1,148 @@
+,Ranking,City,Country,code,num_st_country,num_st_city
+0,1,Bangkok,Thailand,TH,289,76
+1,2,New Delhi,India,IN,88,16
+2,3,Lisbon,Portugal,PT,11,2
+3,4,Barcelona,Spain,ES,101,20
+4,5,Buenos Aires,Argentina,AR,108,74
+5,5,Budapest,Hungary,HU,16,16
+6,7,Mumbai,India,IN,88,33
+7,8,Istanbul,Turkey,TR,326,155
+8,9,Bucharest,Romania,RO,27,15
+9,10,Phuket,Thailand,TH,289,4
+10,10,Chiang Mai,Thailand,TH,289,3
+11,12,Madrid,Spain,ES,101,48
+12,13,Jakarta,Indonesia,ID,268,137
+13,14,São Paulo,Brazil,BR,102,0
+14,15,Rio de Janeiro,Brazil,BR,102,20
+15,16,Sofia,Bulgaria,BG,5,4
+16,17,Mexico City,Mexico,MX,579,180
+17,18,Hanoi,Vietnam,VN,25,0
+18,19,Krakow,Poland,PL,53,1
+19,20,Kuala Lumpur,Malaysia,MY,234,62
+20,21,Ho Chi Minh City,Vietnam,VN,25,0
+21,22,Singapore,Singapore,SG,130,127
+22,23,Belgrade,Serbia,RS,0,1
+23,23,Prague,Czech Republic,CZ,28,3
+24,25,Cape Town,South Africa,ZA,3,0
+25,26,Siem Reap,Cambodia,KH,4,0
+26,27,Porto,Portugal,PT,11,1
+27,28,Valencia,Spain,ES,101,11
+28,29,Kyiv,Ukraine,UA,0,0
+29,30,Los Angeles,United States,UM,0,129
+30,31,Moscow,Russia,RU,109,78
+31,32,Hoi An,Vietnam,VN,25,0
+32,33,Hong Kong,Hong Kong,HK,0,104
+33,34,Colombo,Sri Lanka,LK,0,0
+34,34,Seoul,South Korea,KR,993,243
+35,36,Las Vegas,United States,UM,0,165
+36,37,Santiago,Chile,CL,96,87
+37,38,San Francisco,United States,UM,0,93
+38,38,Berlin,Germany,DE,160,8
+39,40,San Diego,United States,UM,0,135
+40,41,Tokyo,Japan,JP,1237,2
+41,42,Chicago,United States,UM,0,182
+42,43,Marrakech,Morocco,MA,9,1
+43,44,Vienna,Austria,AT,18,4
+44,45,New York,United States,UM,0,233
+45,46,Medellin,Colombia,CO,11,1
+46,47,Malaga,Spain,ES,101,5
+47,48,Dubai,United Arab Emirates,AE,144,78
+48,49,Kathmandu,Nepal,NP,0,0
+49,50,Houston,United States,UM,0,155
+50,51,Seville,Spain,ES,101,1
+51,52,Miami,United States,UM,0,72
+52,53,Sydney,Australia,AU,22,6
+53,54,Johannesburg,South Africa,ZA,3,1
+54,55,Melbourne,Australia,AU,22,12
+55,56,Taipei,Taiwan,TW,394,188
+56,57,Rome,Italy,IT,0,4
+57,58,Faro,Portugal,PT,11,0
+58,59,Osaka,Japan,JP,1237,46
+59,60,Athens,Greece,GR,28,23
+60,61,Phnom Penh,Cambodia,KH,4,4
+61,62,Beijing,China,CN,2734,0
+62,63,Phoenix,United States,UM,0,105
+63,64,Lima,Peru,PE,89,71
+64,65,Montreal,Canada,CA,1468,59
+65,66,Warsaw,Poland,PL,53,6
+66,67,Minsk,Belarus,BY,0,0
+67,68,Cartagena,Colombia,CO,11,0
+68,69,Paris,France,FR,132,61
+69,70,Toronto,Canada,CA,1468,192
+70,71,Ljubljana,Slovenia,SI,0,0
+71,72,Quito,Ecuador,EC,0,0
+72,73,Florence,Italy,IT,0,10
+73,74,Oaxaca,Mexico,MX,579,1
+74,75,Liverpool,United Kingdom,GB,901,13
+75,76,New Orleans,United States,UM,0,13
+76,77,Washington DC,United States,UM,0,3
+77,77,Tallinn,Estonia,EE,0,0
+78,79,Zagreb,Croatia,HR,0,0
+79,80,Xi'an,China,CN,2734,0
+80,81,Yangon,Burma/Myanmar,BU,0,0
+81,82,Kyoto,Japan,JP,1237,26
+82,83,Hamburg,Germany,DE,160,5
+83,84,Naples,Italy,IT,0,16
+84,85,Vancouver,Canada,CA,1468,162
+85,86,Milan,Italy,IT,0,0
+86,87,Arequipa,Peru,PE,89,5
+87,88,Montevideo,Uruguay,UY,0,0
+88,89,Portland,United States,UM,0,121
+89,90,Split,Croatia,HR,0,0
+90,91,Pokhara,Nepal,NP,0,0
+91,92,Cancun,Mexico,MX,579,15
+92,93,Brussels,Belgium,BE,19,7
+93,94,Shanghai,China,CN,2734,2
+94,95,Dublin,Ireland,IE,73,69
+95,96,Riga,Latvia,LV,0,0
+96,97,Lyon,France,FR,132,9
+97,98,Palma de Mallorca,Spain,ES,101,0
+98,99,Brisbane,Australia,AU,22,2
+99,100,Auckland,New Zealand,NZ,24,11
+100,101,Vilnius,Lithuania,LT,0,0
+101,101,London,United Kingdom,GB,901,220
+102,103,Stockholm,Sweden,SE,18,8
+103,104,Manila,Philippines,PH,298,19
+104,105,Honolulu,Hawaii,US,13608,40
+105,105,Munich,Germany,DE,160,2
+106,107,Boston,United States,UM,0,64
+107,108,Calgary,Canada,CA,1468,130
+108,109,Perth,Australia,AU,22,1
+109,110,Marseille,France,FR,132,4
+110,111,Cologne,Germany,DE,160,1
+111,112,Amsterdam,Netherlands,AN,0,16
+112,113,Hvar,Croatia,HR,0,0
+113,114,Dusseldorf,Germany,DE,160,0
+114,115,San Jose,Costa Rica,CR,11,94
+115,116,Abu Dhabi,United Arab Emirates,AE,144,43
+116,117,Helsinki,Finland,FI,8,3
+117,118,Adelaide,Australia,AU,22,0
+118,119,Bordeaux,France,FR,132,3
+119,120,Frankfurt,Germany,DE,160,6
+120,121,Vientiane,Laos,LA,0,0
+121,122,Stuttgart,Germany,DE,160,2
+122,123,Hannover,Germany,DE,160,2
+123,124,Copenhagen,Denmark,DK,21,6
+124,125,Edmonton,Canada,CA,1468,81
+125,126,Dresden,Germany,DE,160,3
+126,126,Manchester,United Kingdom,GB,901,36
+127,128,Rotterdam,Netherlands,AN,0,3
+128,129,St. Petersburg,Russia,RU,109,3
+129,130,La Paz,Bolivia,BO,4,2
+130,131,Doha,Qatar,QA,18,11
+131,132,Ottawa,Canada,CA,1468,43
+132,133,Tel Aviv,Israel,IL,0,0
+133,134,Edinburgh,United Kingdom,GB,901,20
+134,135,Dakar,Senegal,SN,0,0
+135,136,Dubrovnik,Croatia,HR,0,0
+136,137,Muscat,Oman,OM,12,8
+137,138,Oslo,Norway,NO,17,7
+138,139,Glasgow,United Kingdom,GB,901,17
+139,140,Belfast,United Kingdom,GB,901,11
+140,141,Kuwait City,Kuwait,KW,106,0
+141,142,Salzburg,Austria,AT,18,3
+142,143,Beirut,Lebanon,LB,29,12
+143,144,Zurich,Switzerland,CH,61,25
+144,145,Geneva,Switzerland,CH,61,5
+145,146,Valletta,Malta,MT,0,0
+146,147,Reykjavik,Iceland,IS,0,0

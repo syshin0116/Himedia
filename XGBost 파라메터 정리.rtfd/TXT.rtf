@@ -1,0 +1,63 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2638
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fnil\fcharset129 AppleSDGothicNeo-Regular;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww20880\viewh14480\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 XGBoost 
+\f1 \'c7\'cf\'c0\'cc\'c6\'db\'c6\'c4\'b6\'f3\'b8\'de\'c5\'cd
+\f0  
+\f1 \'c6\'a9\'c6\'c3
+\f0 :\
+\
+XGB:\
+	- famous for picking up patterns and regularities in the data by automaticall tuning thousands of learnable parameters\
+\
+\
+Hyperparameters of XGB explained:\
+	- certain values or weights that determine th elearing process of an algorithm\
+	- in tree-baesd models incldue:\
+		- maximum depth of the tree\
+		- number of trees to grow\
+		- number of variables to condiser when building each tree\
+		- minimun number of samples on a leaf\
+		- fraction of observations used to build a tree\
+\
+\
+XGBoost hyperparameters:\
+	General parameters: booster, verbosity, nthread\
+\
+		{{\NeXTGraphic Pasted Graphic.png \width12800 \height9200 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+		<https://xgboost.readthedocs.io/en/latest/parameter.html#general-parameters>\
+\
+		- booster[default = gbtree]  \
+			- helps choose which booster to use \
+			- helps select the type of model to run at each iteration\
+			- has 3 options:  gbtree, gblinear or dart  \
+				- gbtree and dart - use tree-based models\
+				- gblinear uses linear models.\
+\
+		- verbosity[default = 1]  \
+			- Verbosity of printing messages\
+			- Valid values : 0 (silent), 1 (warning), 2 (info), 3 (debug).\
+\
+		- nthread [default = maximum number of threads available if not set]  \
+			- number of parallel threads used to run XGBoost \
+			- used for parallel processing and number of cores in the system should be entered\
+			- If wish to run on all cores: value should not be entered and algorithm will detect automatically\
+\
+Not discussed:\
+disable_default_eval_metric [default=0]\
+num_pbuffer [set automatically by XGBoost, no need to be set by user] \
+num_feature [set automatically by XGBoost, no need to be set by user]\
+\
+	Booster Parameters: tree booster, linear booster\
+		- tree booster always outperforms linear booster\
+		- more information at <{\field{\*\fldinst{HYPERLINK "https://www.kaggle.com/code/prashant111/a-guide-on-xgboost-hyperparameters-tuning/notebook"}}{\fldrslt https://www.kaggle.com/code/prashant111/a-guide-on-xgboost-hyperparameters-tuning/notebook}}>\
+\
+		- eta [default=0.3, alias: learning_rate]\
+			- analogous to learning rate in GBM\
+			- step size shrinkage used in update to prevent overfitting\
+			-  }

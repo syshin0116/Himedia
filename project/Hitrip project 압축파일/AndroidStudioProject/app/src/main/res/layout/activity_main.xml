@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button_orange"
+        android:layout_width="match_parent"
+        android:layout_height="400px"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:text="HiTrip 웹으로" />
+
+    <Button
+        android:id="@+id/button_green"
+        android:layout_width="match_parent"
+        android:layout_height="400px"
+        android:backgroundTint="@color/green"
+        android:text="담당자 전화" />
+
+    <Button
+        android:id="@+id/button_red"
+        android:layout_width="match_parent"
+        android:layout_height="400px"
+        android:backgroundTint="@color/red"
+        android:text="플래너"
+        app:iconPadding="8dp" />
+
+    <Button
+        android:id="@+id/button_yellow"
+        android:layout_width="match_parent"
+        android:layout_height="400px"
+        android:backgroundTint="@color/yellow"
+        android:text="노랑버튼(끝내기)"
+        android:textColor="@color/black"
+        />
+</LinearLayout>

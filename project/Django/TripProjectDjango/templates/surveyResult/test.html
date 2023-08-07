@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+answer_list
+{% for surveyResultList in answer_list %}
+    {{ surveyResultList }}
+{% endfor %}
+<br>
+session=
+{{ sessionId }}
+<br>
+surveyResultList =
+{% for one in surveyResultList %}
+    {{ one }}
+{% endfor %}
+<br>
+surveyList =
+{% for List in surveyList %}
+    {{ List }}
+{% endfor %}
+
+</body>
+</html>

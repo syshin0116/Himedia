@@ -1,0 +1,8 @@
+package object;
+
+class Animal{
+	
+}
+public class Sample3 {
+
+}

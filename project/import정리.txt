@@ -1,0 +1,49 @@
+import time
+from IPython.display import Image
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pickle
+from sklearn.preprocessing import LabelEncoder
+from sklearn.model_selection import train_test_split
+from sklearn.model_selection import KFold
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.naive_bayes import GaussianNB
+from xgboost import XGBClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.svm import SVC
+from sklearn.metrics import accuracy_score
+
+from sklearn.model_selection import GridSearchCV
+from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import cross_val_predict
+from pandas.plotting import parallel_coordinates
+import warnings
+warnings.filterwarnings('ignore')
+from sklearn.preprocessing import StandardScaler # 표준화(평균을 기준)
+from sklearn.preprocessing import MinMaxScaler # 정규화(정해진 규칙 기준, mix-max기준)
+from sklearn.datasets import load_iris
+# cross_val_score: 다양한 샘플링으 ㄹ해서 여러번 테스트 --> 평균치를 구해본다.!
+from sklearn.metrics import *
+from sklearn.metrics import roc_curve, roc_auc_score
+from sklearn.preprocessing import LabelEncoder
+
+
+%matplotlib inline
+
+# 주요 라이브러리 import
+
+from matplotlib import rc, font_manager
+import matplotlib.font_manager as fm
+
+
+# 디렉토리 및 파일 이름에 맞추어 변경
+font_location = 'C:/Users/hi/Himedia_jupyter/NanumGothic.ttf'
+font_name = fm.FontProperties(fname=font_location).get_name()
+rc('font', family=font_name)
+import scipy.io as spio
+
+from pandas.plotting import parallel_coordinates

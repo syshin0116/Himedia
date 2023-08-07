@@ -1,0 +1,37 @@
+package object2;
+
+class Animal{
+	String name;
+	
+	void setname(String name) {
+		this.name=name;
+	}
+}
+
+class Tiger extends Animal{
+}
+
+class Lion extends Animal{
+	
+}
+
+class Zookeeper{
+	void feed(Tiger tiger) {
+		System.out.println("닭고기를 먹이로 줍니다.");
+	}
+	void feed(Lion lion) {
+		System.out.println("돼지고기를 먹이로 줍니다.");
+	}
+}
+public class Sample {
+
+	public static void main(String[] args) {
+		Zookeeper zookeeper = new Zookeeper();
+		Tiger tiger = new Tiger();
+		Lion  lion  = new Lion();
+		
+		zookeeper.feed(lion);
+		zookeeper.feed(tiger);
+	}
+
+}

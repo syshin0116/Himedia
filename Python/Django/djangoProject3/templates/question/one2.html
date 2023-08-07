@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            text-align: center;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        .c1 {
+            background: lightcoral;
+            width: 150px;
+            height: 30px;
+        }
+
+        button {
+            background: limegreen;
+        }
+    </style>
+</head>
+<body>
+<h3>질문정보 검색 결과 {{ test }}</h3>
+<table border="1">
+    <tr>
+        <td width="100" class="c1">질문 번호</td>
+        <td width="200">
+            {{ one.id }}
+        </td>
+    </tr>
+    <tr>
+        <td width="100" class="c1">질문 내용</td>
+        <td width="200">
+            {{ one.question_text }}
+        </td>
+    </tr>
+    <tr>
+        <td width="100" class="c1">작성자</td>
+        <td width="200">
+            {{ one.question_writer }}
+        </td>
+    </tr>
+
+    <tr>
+        <td class="c1">질문정보페이지로</td>
+        <td width="200">
+            <a href="/question">
+                <button>질문정보페이지로</button>
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td class="c1">질문수정페이지로</td>
+        <td width="200">
+            <a href="/question/update/{{ one.id }}">
+                <button>질문수정페이지로</button>
+            </a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

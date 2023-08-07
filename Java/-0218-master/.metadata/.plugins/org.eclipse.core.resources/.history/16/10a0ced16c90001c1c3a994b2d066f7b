@@ -1,0 +1,13 @@
+package com.hi.mvc05;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class AjaxController {
+
+	@RequestMapping("movie")
+	public void name(String title, int price) {
+		
+	}
+}

@@ -1,0 +1,16 @@
+!SESSION 2022-04-26 09:59:03.540 -----------------------------------------------
+eclipse.buildId=4.23.0.I20220308-0310
+java.version=11.0.14.1
+java.vendor=Azul Systems, Inc.
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=en_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/syshin/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.eclipse.epp.package.jee.product -keyring /Users/syshin/.eclipse_keyring
+
+This is a continuation of log file /Users/syshin/Desktop/Himedia/data2/.metadata/.bak_0.log
+Created Time: 2022-04-26 09:59:14.439
+
+!ENTRY org.eclipse.ui.navigator 2 0 2022-04-26 09:59:14.439
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.ui.navigator 2 0 2022-04-26 09:59:14.439
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering

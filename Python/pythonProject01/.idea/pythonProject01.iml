@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="jdk" jdkName="Python 3.7" jdkType="Python SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="pythonProject02" />
+    <orderEntry type="module" module-name="pythonPrioject04" />
+    <orderEntry type="module" module-name="pythonProject04" />
+    <orderEntry type="module" module-name="pythonProject05" />
+    <orderEntry type="module" module-name="pythonProject03" />
+    <orderEntry type="module" module-name="pythonProject06" />
+    <orderEntry type="module" module-name="pythonProject07" />
+  </component>
+</module>
